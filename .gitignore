@@ -1,6 +1,6 @@
 # User-specific files
 resources/
-results/plots/*taglinks/frames/
+results/*tagcomm/frames/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

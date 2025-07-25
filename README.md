@@ -27,15 +27,15 @@ mobile-wsn-localization/
 
 ## Getting Started
 
-### 🔧 Dependencies
+### Dependencies
 
 This project requires Python 3.9+ and the following packages:
 
 ```bash
-pip install numpy matplotlib
+pip install numpy matplotlib pillow imageio[ffmpeg]
 ```
 
-### ▶️ Run the Simulation
+### Run the Simulation
 
 ```bash
 python main.py
@@ -51,7 +51,7 @@ This will launch a fullscreen live simulation showing:
 
 | Without Tag Links | With Tag Links |
 |-------------------|----------------|
-| ![](./results/plots/notaglinks_end.jpg) | ![](./results/plots/taglinks_end.jpg) |
+| ![](./results/notaglinks/end.jpg) | ![](./results/taglinks/end.jpg) |
 
 > The presence of inter-tag communication prevents uncertainty divergence over time.
 
@@ -60,10 +60,10 @@ This will launch a fullscreen live simulation showing:
 Edit the following parameters directly in `main.py`:
 
 ```python
-tagLinks      = True    # Enable/disable tag-to-tag communication
-finalTime     = 800     # Total simulation time
-sensingRadius = 7       # Sensor range in meters
-tick          = 1       # Time increment per step
+tagcomm        = True    # Enable/disable tag-to-tag communication
+final_time     = 10      # Total simulation time in seconds
+sensing_radius =  7      # Sensor range in meters
+timestep       =  0.1    # Timestep in seconds
 ```
 
 ## Applications
