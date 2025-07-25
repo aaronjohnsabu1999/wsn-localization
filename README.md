@@ -1,29 +1,32 @@
-# Mobile WSN Localization: Tag-Aided Uncertainty Reduction  
+# CoLoNet: Collaborative Localization in Wireless Sensor Networks
 ![Python](https://img.shields.io/badge/python-3.9+-blue?logo=python)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 ![Platform](https://img.shields.io/badge/platform-Matplotlib%20%7C%20NumPy-lightgrey)
 
-**Mobile WSN Localization** is a Python-based simulation framework that models how **tag-to-tag linkages** affect uncertainty in mobile wireless sensor networks. Using a geometric approach to uncertainty and neighbor-based trilateration, the system demonstrates how mobility and communication reduce localization error in sparse fixed-anchor environments.
+CoLoNet simulates how mobile wireless sensors can localize themselves more accurately by talking to each other. Using geometric uncertainty models and neighbor-based trilateration, it shows how inter-tag links can reduce localization error—especially when fixed anchors are few and far between.
 
 ## Project Structure
 
 ```
-mobile-wsn-localization/
+colonet/
+├── assets/
+├── results/
 ├── main.py                    # Core simulation and visualization
 ├── report.pdf                 # Technical documentation
 ├── presentation.pdf           # Presentation slides
 ├── README.md
-└── LICENSE
+├── LICENSE
+└── .gitignore
 ```
 
 ## Features
 
-- **Mobile + fixed sensor modeling** with configurable sensing radii
-- **Real-time uncertainty visualization** using `matplotlib`
-- **Neighbor-based updates** with optional tag-to-tag communication
-- **Custom coordinate and sensor classes** with basic physics support
-- **Simulation toggle** for enabling/disabling tag links
+- Mobile + fixed sensor modeling with configurable sensing radii
+- Real-time uncertainty visualization using `matplotlib`
+- Neighbor-based updates with optional tag-to-tag communication
+- Custom coordinate and sensor classes with basic physics support
+- Simulation toggle for enabling/disabling tag links
 
 ## Getting Started
 
@@ -51,9 +54,18 @@ This will launch a fullscreen live simulation showing:
 
 | Without Tag Links | With Tag Links |
 |-------------------|----------------|
-| ![](./results/notaglinks/end.jpg) | ![](./results/taglinks/end.jpg) |
+| ![](./results/notagcomm/end.jpg) | ![](./results/tagcomm/end.jpg) |
 
 > The presence of inter-tag communication prevents uncertainty divergence over time.
+
+## Sample Output Video
+
+Each simulation produces a `sim.mp4` video showing localization evolution over time.
+
+| Mode              | Example Video           |
+|-------------------|-------------------------|
+| No Tag Comm       | `results/notagcomm/sim.mp4` |
+| With Tag Comm     | `results/tagcomm/sim.mp4`   |
 
 ## Configuration
 
@@ -68,10 +80,10 @@ timestep       =  0.1    # Timestep in seconds
 
 ## Applications
 
-- **Wildlife localization and monitoring**
-- **Ad hoc sensor networks in urban environments**
-- **Low-power distributed positioning systems**
-- **Indoor GPS-denied navigation**
+- Wildlife localization and monitoring
+- Ad hoc sensor networks in urban environments
+- Low-power distributed positioning systems
+- Indoor GPS-denied navigation
 
 ## Project Context
 
